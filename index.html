@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAMS vs MBBS: The Ultimate Comparison</title>
+    <title>BAMS vs MBBS: Which Medical Path is Right For You?</title>
     
     <!-- SEO & Open Graph Meta Tags -->
     <meta name="description" content="BAMS vs MBBS - Compare careers, curriculum, and choose the right medical path.">
@@ -19,7 +19,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.7;
             color: #333;
-            background-color: #0b0f19; /* Sci-fi subtle deep space tint */
+            background-color: #0b0f19;
             margin: 0;
             padding: 20px;
             transition: background 0.3s, color 0.3s;
@@ -63,7 +63,7 @@
             color: #475569;
         }
 
-        /* Header Controls (Command Palette hint + Dark Mode) */
+        /* Header Controls */
         .header-controls {
             display: flex;
             gap: 10px;
@@ -149,6 +149,68 @@
             margin-bottom: 0;
         }
 
+        /* --- Interactive Disease Grid & Search Styles --- */
+        .disease-search {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            background: #f8fafc;
+            font-size: 1em;
+            color: #1e293b;
+            margin-bottom: 20px;
+            outline: none;
+            box-sizing: border-box;
+            transition: all 0.2s;
+        }
+        .disease-search:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        .disease-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .disease-card {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 22px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .disease-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+            border-color: #2563eb;
+        }
+        .disease-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1e293b;
+            margin: 0 0 8px 0;
+        }
+        .badge-duration {
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.78em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .disease-prop {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            color: #475569;
+        }
+        .disease-prop strong {
+            color: #1e293b;
+        }
+
         /* Social Share Buttons */
         .social-share {
             display: flex;
@@ -226,6 +288,30 @@
         }
         body.dark-mode .cmd-item:hover, body.dark-mode .cmd-item.active {
             background: #374151;
+        }
+        body.dark-mode .disease-search {
+            background: #1f2937;
+            color: #f8fafc;
+            border-color: #374151;
+        }
+        body.dark-mode .disease-card {
+            background: #1f2937;
+            border-color: #374151;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        body.dark-mode .disease-card:hover {
+            border-color: #60a5fa;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+        }
+        body.dark-mode .disease-title, body.dark-mode .disease-prop strong {
+            color: #f8fafc;
+        }
+        body.dark-mode .disease-prop {
+            color: #9ca3af;
+        }
+        body.dark-mode .badge-duration {
+            background: #1e3a8a;
+            color: #93c5fd;
         }
 
         /* VS Code Style Command Palette Overlay */
@@ -366,11 +452,11 @@
             <!-- Feature 1: Pure-Math Sci-Fi Canvas Radar Chart -->
             <section class="radar-section" id="radar-section">
                 <h2 style="margin-top: 0;">⚡ Multi-Axis Matrix Comparison</h2>
-                <p style="font-size: 0.95em; color: #64748b; margin-bottom: 20px;">Comparative vector analysis across 5 core medical dimensions (Rendered via HTML5 Trigonometric Canvas Engine).</p>
+                <p style="font-size: 0.95em; color: #64748b; margin-bottom: 20px;">Comparative vector analysis across 5 core medical dimensions.</p>
                 
                 <div class="radar-legend">
-                    <span class="legend-mbbs">■ MBBS (Allopathy)</span>
-                    <span class="legend-bams">■ BAMS (Ayurveda)</span>
+                    <span class="legend-mbbs">■ MBBS</span>
+                    <span class="legend-bams">■ BAMS</span>
                 </div>
 
                 <canvas id="radarCanvas" width="450" height="400" style="max-width: 100%; height: auto;"></canvas>
@@ -391,6 +477,40 @@
                 </details>
             </section>
 
+            <!-- Interactive Graphic Disease Matrix Grid -->
+            <section style="margin: 40px 0;">
+                <h2>Interactive Medical Condition Dossier</h2>
+                <p style="font-size: 0.95em; color: #64748b; margin-bottom: 15px;">Search through conditions to instantly inspect their origin, visual signs, medications, and cure duration.</p>
+                
+                <!-- Live Search Bar -->
+                <input type="text" class="disease-search" id="diseaseSearch" placeholder="🔍 Search disease, symptoms, or remedies..." oninput="filterDiseaseCards()">
+
+                <!-- Interactive Cards Grid -->
+                <div class="disease-grid" id="diseaseGrid">
+                    
+                    <!-- Card 1 -->
+                    <div class="disease-card">
+                        <h3 class="disease-title">Common Cold</h3>
+                        <span class="badge-duration">⏳ Cure: 3 to 7 Days</span>
+                        <div class="disease-prop"><strong>Origin:</strong> Rhinovirus (Airborne droplets)</div>
+                        <div class="disease-prop"><strong>Visual Signs:</strong> Runny nose, watery eyes, mild facial redness</div>
+                        <div class="disease-prop"><strong>Medications:</strong> Antihistamines, steam inhalation, herbal teas</div>
+                        <div class="disease-prop"><strong>Why it Happens:</strong> Viral upper respiratory tract infection</div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="disease-card">
+                        <h3 class="disease-title">Vata Imbalance</h3>
+                        <span class="badge-duration">⏳ Cure: 1 to 3 Weeks</span>
+                        <div class="disease-prop"><strong>Origin:</strong> Irregular diet, cold weather, stress</div>
+                        <div class="disease-prop"><strong>Visual Signs:</strong> Dry skin, cracked lips, anxious expression</div>
+                        <div class="disease-prop"><strong>Medications:</strong> Ashwagandha, warm oil massage (Abhyanga)</div>
+                        <div class="disease-prop"><strong>Why it Happens:</strong> Aggravation of Air & Space elements in body</div>
+                    </div>
+
+                </div>
+            </section>
+
             <!-- Direct Social Share Buttons -->
             <div class="social-share">
                 <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20BAMS%20vs%20MBBS%20comparison:%20https://medicalblogs.netlify.app" target="_blank" class="share-btn whatsapp">💬 Share on WhatsApp</a>
@@ -403,7 +523,7 @@
         </footer>
     </div>
 
-    <!-- JavaScript: Dark Mode, Command Palette & Pure-Math Canvas Radar Chart -->
+    <!-- JavaScript: Dark Mode, Command Palette, Live Search & Canvas Radar Chart -->
     <script>
         // --- 1. Dark Mode Toggle ---
         function toggleDarkMode() {
@@ -418,17 +538,30 @@
                 btn.style.background = "#f1f5f9";
                 btn.style.color = "#334155";
             }
-            drawRadarChart(); // Redraw canvas for dark mode colors
+            drawRadarChart();
         }
 
-        // --- 2. VS Code Style Command Palette Logic ---
+        // --- 2. Live Search Filter for Diseases ---
+        function filterDiseaseCards() {
+            const query = document.getElementById('diseaseSearch').value.toLowerCase();
+            const cards = document.querySelectorAll('.disease-card');
+            
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // --- 3. VS Code Style Command Palette Logic ---
         document.addEventListener('keydown', function(e) {
-            // Trigger with Ctrl+K or Cmd+K
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
                 openPalette();
             }
-            // Close with Escape
             if (e.key === 'Escape') {
                 closePalette();
             }
@@ -475,7 +608,7 @@
             }
         }
 
-        // --- 3. Pure-Math Canvas Radar Chart Engine ---
+        // --- 4. Pure-Math Canvas Radar Chart Engine ---
         function drawRadarChart() {
             const canvas = document.getElementById('radarCanvas');
             if (!canvas.getContext) return;
@@ -492,7 +625,6 @@
             const labels = ["Emergency", "Holistic", "Surgical", "Work-Life", "Global Demand"];
             const numAxes = labels.length;
             
-            // Data normalized out of 100
             const mbbsData = [95, 40, 95, 50, 90];
             const bamsData = [30, 95, 40, 80, 70];
 
@@ -500,7 +632,6 @@
             const gridColor = isDark ? '#374151' : '#cbd5e1';
             const textColor = isDark ? '#9ca3af' : '#475569';
 
-            // Draw Web Grid (Concentric polygons)
             for (let level = 1; level <= 4; level++) {
                 ctx.beginPath();
                 ctx.strokeStyle = gridColor;
@@ -517,7 +648,6 @@
                 ctx.stroke();
             }
 
-            // Draw Axis Lines & Labels
             ctx.font = '12px Segoe UI, sans-serif';
             ctx.fillStyle = textColor;
             ctx.textAlign = 'center';
@@ -534,14 +664,12 @@
                 ctx.strokeStyle = gridColor;
                 ctx.stroke();
 
-                // Label positioning offset
                 const labelDist = radius + 25;
                 const lx = centerX + labelDist * Math.cos(angle);
                 const ly = centerY + labelDist * Math.sin(angle);
                 ctx.fillText(labels[i], lx, ly);
             }
 
-            // Helper function to draw dataset polygon
             function drawPolygon(data, strokeColor, fillColor) {
                 ctx.beginPath();
                 for (let i = 0; i < numAxes; i++) {
@@ -560,13 +688,10 @@
                 ctx.stroke();
             }
 
-            // Draw BAMS Polygon (Green)
             drawPolygon(bamsData, 'rgba(22, 163, 74, 0.9)', 'rgba(22, 163, 74, 0.2)');
-            // Draw MBBS Polygon (Blue)
             drawPolygon(mbbsData, 'rgba(37, 99, 235, 0.9)', 'rgba(37, 99, 235, 0.2)');
         }
 
-        // Initialize Radar Chart on load
         window.onload = drawRadarChart;
     </script>
 </body>
