@@ -3,227 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mera BAMS & MBBS Medical Blog</title>
-    <!-- SEO & Open Graph Meta Tags for WhatsApp/Instagram Previews -->
-     <!-- Tailwind CSS CDN for Modern Styling -->
-<script src="https://cdn.tailwindcss.com"></script>
+    <title>BAMS vs MBBS: Which Medical Path is Right For You?</title>
+    
+    <!-- SEO & Open Graph Meta Tags -->
     <meta name="description" content="BAMS vs MBBS - Compare careers, curriculum, and choose the right medical path.">
     <meta property="og:title" content="BAMS vs MBBS: Which Medical Path is Right For You?">
     <meta property="og:description" content="Explore the deep differences between Ayurveda and Modern Medicine.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d">
     <meta property="og:url" content="https://medicalblogs.netlify.app">
     <meta property="og:type" content="website">
-    <!-- Google tag (gtag.js) - Analytics Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XH6B1GVCT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-5XH6B1GVCT');
-    </script>
-
-    <style>
-        /* 1. LIGHT MODE STYLING (Default Theme) */
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 40px; 
-            background-color: #f4f4f9; 
-            color: #333; 
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: background 0.3s, color 0.3s;
-        }
-
-        h1 { color: #0066cc; text-align: center; }
-        h2 { color: #444; border-bottom: 2px solid #ddd; padding-bottom: 5px; margin-top: 35px; }
-        h3 { color: #0066cc; margin-top: 25px; }
-        h4 { color: #333; margin-top: 20px; margin-bottom: 8px; }
-        p { line-height: 1.6; font-size: 15px; }
-        ul { line-height: 1.7; margin-bottom: 20px; padding-left: 20px; }
-        li { margin-bottom: 6px; font-size: 15px; }
-
-        /* Comparison Table Styling */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
-        .comparison-table th, .comparison-table td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-            vertical-align: top;
-        }
-        .comparison-table th {
-            background-color: #0066cc;
-            color: white;
-        }
-        .comparison-table tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        /* 2. DARK MODE STYLING */
-        body.dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        body.dark-mode .container {
-            background-color: #1e1e1e;
-            box-shadow: 0 4px 15px rgba(255,255,255,0.05);
-        }
-        body.dark-mode h1, body.dark-mode h3 { color: #4da6ff; }
-        body.dark-mode h2, body.dark-mode h4 { color: #ffffff; border-bottom: 2px solid #444; }
-        
-        /* Dark Mode Table Styling */
-        body.dark-mode .comparison-table th {
-            background-color: #1a73e8;
-        }
-        body.dark-mode .comparison-table td, body.dark-mode .comparison-table th {
-            border-color: #444;
-        }
-        body.dark-mode .comparison-table tr:nth-child(even) {
-            background-color: #252525;
-        }
-
-        /* Toggle Button Styling */
-        .toggle-btn {
-            display: block;
-            margin: 0 auto 20px auto;
-            padding: 10px 20px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            background-color: #0066cc;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            transition: background 0.2s;
-        }
-        .toggle-btn:hover { background-color: #004b99; }
-    </style>
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; background-color: #f4f4f9;">
 
-    <div class="container">
-        <!-- Dark / Light Mode Switch Button -->
-        <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark / Light Mode</button>
+    <header style="text-align: center; padding: 20px 0;">
+        <h1 style="color: #2c3e50;">BAMS vs MBBS: The Ultimate Comparison</h1>
+        <p style="color: #555;">Choosing between Ayurveda and Modern Medicine after 12th.</p>
+    </header>
 
-        <!-- Blog Header -->
-        <h2>Medical Career Guide: BAMS vs. MBBS</h2>
-        <p>Explore a detailed breakdown, course structure, and head-to-head comparison between MBBS and BAMS professional medical degrees.</p>
-        
-        <!-- Part 1: MBBS -->
-        <h3>Part 1: MBBS (Bachelor of Medicine and Bachelor of Surgery)</h3>
-        <p>MBBS ko modern medical science (Allopathy) ka gold standard mana jata hai. Yeh pure world me ek standardized framework par chalta hai jo evidence-based medicine par आधारित hota hai.</p>
-        
-        <h4>1. Course Structure & Duration</h4>
-        <ul>
-            <li><strong>Duration:</strong> 5.5 years (4.5 years academic + 1 year compulsory internship).</li>
-            <li><strong>1st Year:</strong> Anatomy, Physiology, Biochemistry (Human body ka basic hardware aur function).</li>
-            <li><strong>2nd Year:</strong> Pathology, Pharmacology, Microbiology, Forensic Medicine (Bimariyan kaise hoti hain aur unka ilaaj chemical/drug level par kaise hota hai).</li>
-            <li><strong>3rd & Final Year:</strong> General Medicine, Surgery, Pediatrics, Obstetrics & Gynecology (OBG), Orthopedics, ENT, Ophthalmology, aur Community Medicine.</li>
-        </ul>
+    <main>
+        <section style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h2 style="color: #2980b9;">Overview</h2>
+            <p>Both medical fields offer incredible career opportunities, but they have completely different philosophies. MBBS focuses on modern allopathic medicine, pharmacology, and clinical surgeries, whereas BAMS focuses on ancient Indian Ayurvedic medicine, natural herbs, and root-cause healing.</p>
+        </section>
 
-        <h4>2. Career Scope & Earning Potential</h4>
-        <ul>
-            <li><strong>Junior Resident / Medical Officer:</strong> Degree milte hi aap hospitals me duty join kar sakte hain ya government exams (jaise UPSC CMS ya State PSC) dekar state/central medical officer ban sakte hain.</li>
-            <li><strong>Post-Graduation (MD / MS / DNB):</strong> MBBS ke baad NEET-PG exam clear karke specialization karni padti hai (jaise Cardiologist, Neurologist, Surgeon, Radiologist). Modern medicine me specialization ke bina career growth slow hoti hai.</li>
-            <li><strong>Corporate & Private Practice:</strong> Apollo, Fortis jaise bade corporate hospitals me specialists ki demand hamesha high rehti hai, aur private setup me bhi earning potential kaafi steep (tez) hota hai.</li>
-        </ul>
+        <!-- Interactive BAMS vs MBBS Quiz Section -->
+        <section style="margin: 40px auto; padding: 25px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+            <h3 style="color: #2c3e50; text-align: center; margin-bottom: 20px;">🎯 Which Medical Path Fits You Best?</h3>
+            
+            <div id="quiz-box">
+                <p id="quiz-question" style="font-weight: bold; font-size: 1.1em; color: #333; margin-bottom: 15px;"></p>
+                <div id="quiz-options" style="display: flex; flex-direction: column; gap: 10px;"></div>
+            </div>
+            
+            <div id="quiz-result" style="margin-top: 20px; font-weight: bold; text-align: center; font-size: 1.1em;"></div>
+        </section>
+    </main>
 
-        <!-- Part 2: BAMS -->
-        <h3>Part 2: BAMS (Bachelor of Ayurvedic Medicine and Surgery)</h3>
-        <p>BAMS ek integrative medical degree hai jisme classical Indian medical texts (Samhitas) ke sath-sath modern medical science ki bhi padhai hoti hai.</p>
-        
-        <h4>1. Course Structure & Duration</h4>
-        <ul>
-            <li><strong>Duration:</strong> 5.5 years (4.5 years split into 3 professional years + 1 year internship).</li>
-            <li><strong>1st Professional Year:</strong> Sanskrit, Samhita Adhyayan, Padartha Vigyan (Philosophy), Rachana Sharira (Anatomy), aur Kriya Sharira (Physiology).</li>
-            <li><strong>2nd & 3rd Professional Years:</strong> Dravyaguna (Herbal Pharmacology), Rasa Shastra (Mineral & Metallic medicines), Agada Tantra (Toxicology), Rog Vinishchaya (Pathology), Swasthavritta (Preventive Medicine), ENT, Ophthalmology.</li>
-            <li><strong>Final Year:</strong> Kaya Chikitsa (Internal Medicine), Shalya Tantra (Surgery), Shalakya Tantra, Prasooti Tantra & Stree Roga (Gynecology), aur Kaumarbhritya (Pediatrics).</li>
-        </ul>
-
-        <h4>2. Career Scope & Earning Potential</h4>
-        <ul>
-            <li><strong>Private Clinical Practice:</strong> Agar aapki clinical diagnostics aur chronic disease management (jaise joint disorders, skin diseases, metabolic issues) par pakad achi hai, toh private practice me bohot bada scope hai.</li>
-            <li><strong>Government Jobs (AYUSH MO):</strong> Central aur State governments ke through Government Ayurvedic Hospitals, dispensaries, aur National Health Mission (NHM) ke andar Medical Officers ki vacancies milti hain.</li>
-            <li><strong>Post-Graduation (MD / MS Ayurveda):</strong> AIAPGET exam ke zariye aap Panchakarma, Kaya Chikitsa, ya Shalya Tantra me specialization kar sakte hain.</li>
-            <li><strong>Wellness & Corporate Sector:</strong> International wellness resorts, medical tourism, aur Ayurvedic pharma companies (Dabur, Patanjali, Himalaya, etc.) me R&D aur consultancy roles milte hain.</li>
-        </ul>
-
-        <!-- Part 3: Comparison Table -->
-        <h3>Part 3: Head-to-Head Comparison (BAMS vs. MBBS)</h3>
-        
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>Feature / Parameter</th>
-                    <th>MBBS (Allopathy)</th>
-                    <th>BAMS (Ayurveda + Modern Science)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Medical System</strong></td>
-                    <td>Evidence-based Modern Allopathic Medicine.</td>
-                    <td>Classical Ayurveda integrated with Modern Anatomy & Pathology.</td>
-                </tr>
-                <tr>
-                    <td><strong>Entrance Exam (India)</strong></td>
-                    <td>NEET-UG (All India single window).</td>
-                    <td>NEET-UG (All India single window).</td>
-                </tr>
-                <tr>
-                    <td><strong>Primary Focus</strong></td>
-                    <td>Acute care, emergency medicine, surgeries, and biochemical pharmacology.</td>
-                    <td>Root-cause treatment, chronic disease management, lifestyle correction, and Panchakarma.</td>
-                </tr>
-                <tr>
-                    <td><strong>Legal Practice Rights</strong></td>
-                    <td>Broad allopathic prescription rights and surgical procedures (as per specialization).</td>
-                    <td>Prescription of Ayurvedic formulations; state-wise legal frameworks vary regarding modern emergency drug usage.</td>
-                </tr>
-                <tr>
-                    <td><strong>Post-Graduation Exam</strong></td>
-                    <td>NEET-PG / INI-CET (Highly competitive, extensive syllabus).</td>
-                    <td>AIAPGET (All India AYUSH Post Graduate Entrance Test).</td>
-                </tr>
-                <tr>
-                    <td><strong>Initial Career Setup</strong></td>
-                    <td>High demand in emergency rooms, corporate hospitals, and junior resident roles right after graduation.</td>
-                    <td>Often builds on establishing a private clinic, joining wellness chains, or clearing AYUSH government exams.</td>
-                </tr>
-                <tr>
-                    <td><strong>Global Recognition</strong></td>
-                    <td>Universally recognized across all countries (subject to clearing local licensing exams like USMLE/PLAB).</td>
-                    <td>Recognized primarily where traditional medicine, holistic health, and wellness tourism are growing (Europe, US wellness sectors, Middle East).</td>
-                </tr>
-                <tr>
-                    <td><strong>Learning Curve</strong></td>
-                    <td>Heavy reliance on lab reports, diagnostic machinery, pharmaceuticals, and surgical techniques.</td>
-                    <td>Heavy reliance on patient constitution (Prakriti), pulse diagnosis (Nadi Pariksha), herbal pharmacology, and lifestyle assessment.</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <footer style="text-align: center; margin-top: 40px; color: #777; font-size: 0.9em;">
+        <p>&copy; 2026 Medical Blogs. All rights reserved.</p>
+    </footer>
 
     <script>
-        // DOM Manipulation & Dark Mode Toggle Logic
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
+        const quizData = [
+            {
+                question: "1. What excites you more in medical science?",
+                options: [
+                    { text: "Ancient holistic healing, natural herbs & root causes (Ayurveda)", type: "BAMS" },
+                    { text: "Modern pharmacology, emergency care & surgeries (Allopathy)", type: "MBBS" }
+                ]
+            },
+            {
+                question: "2. How do you prefer treating chronic lifestyle diseases?",
+                options: [
+                    { text: "Through lifestyle modification, diet, and herbal formulations", type: "BAMS" },
+                    { text: "Through targeted synthetic drugs and advanced diagnostic technology", type: "MBBS" }
+                ]
+            }
+        ];
 
+        let currentQuestion = 0;
+        let score = { BAMS: 0, MBBS: 0 };
+
+        function loadQuiz() {
+            const qElement = document.getElementById("quiz-question");
+            const optionsElement = document.getElementById("quiz-options");
+            document.getElementById("quiz-result").innerHTML = "";
+
+            if (currentQuestion < quizData.length) {
+                const currentQ = quizData[currentQuestion];
+                qElement.innerText = currentQ.question;
+                optionsElement.innerHTML = "";
+
+                currentQ.options.forEach(opt => {
+                    const btn = document.createElement("button");
+                    btn.innerText = opt.text;
+                    btn.style.padding = "12px 15px";
+                    btn.style.backgroundColor = "#f8f9fa";
+                    btn.style.border = "1px solid #cbd5e1";
+                    btn.style.borderRadius = "8px";
+                    btn.style.cursor = "pointer";
+                    btn.style.textAlign = "left";
+                    btn.style.fontSize = "1em";
+                    btn.style.width = "100%";
+
+                    btn.onmouseover = () => btn.style.backgroundColor = "#e2e8f0";
+                    btn.onmouseout = () => btn.style.backgroundColor = "#f8f9fa";
+
+                    btn.onclick = () => selectAnswer(opt.type);
+                    optionsElement.appendChild(btn);
+                });
+            } else {
+                showResult();
+            }
+        }
+
+        function selectAnswer(type) {
+            score[type]++;
+            currentQuestion++;
+            loadQuiz();
+        }
+
+        function showResult() {
+            const qBox = document.getElementById("quiz-box");
+            qBox.style.display = "none";
+            const resultBox = document.getElementById("quiz-result");
+            
+            if (score.BAMS > score.MBBS) {
+                resultBox.style.color = "#16a34a";
+                resultBox.innerHTML = "🎉 Result: **BAMS** is a fantastic choice for your mindset! Deep natural healing and holistic wellness align with your goals.";
+            } else {
+                resultBox.style.color = "#2563eb";
+                resultBox.innerHTML = "🎉 Result: **MBBS** suits your strong interest in modern clinical practice, diagnostics, and surgeries!";
+            }
+        }
+
+        loadQuiz();
+    </script>
 </body>
 </html>
