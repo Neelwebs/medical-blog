@@ -149,7 +149,7 @@
             margin-bottom: 0;
         }
 
-        /* --- Interactive Disease Grid & Search Styles --- */
+        /* Interactive Disease Grid & Search Styles */
         .disease-search {
             width: 100%;
             padding: 14px 18px;
@@ -162,10 +162,6 @@
             outline: none;
             box-sizing: border-box;
             transition: all 0.2s;
-        }
-        .disease-search:focus {
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
         .disease-grid {
             display: grid;
@@ -209,6 +205,184 @@
         }
         .disease-prop strong {
             color: #1e293b;
+        }
+
+        /* --- Web Designer Footer Link --- */
+        .developer-footer-link {
+            text-align: center;
+            margin: 35px 0 20px 0;
+        }
+        .developer-footer-link a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            border-bottom: 1px dashed #38bdf8;
+            padding-bottom: 2px;
+            transition: all 0.2s;
+        }
+        .developer-footer-link a:hover {
+            color: #0284c7;
+            border-color: #0284c7;
+        }
+
+        /* Developer Modal Overlay */
+        .dev-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .dev-modal {
+            background: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 16px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+            animation: scaleUp 0.2s ease-out;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .dev-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #64748b;
+            background: none;
+            border: none;
+        }
+        .dev-profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .dev-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2563eb;
+            margin: 0 auto 15px auto;
+            display: block;
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+        }
+        .dev-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #1e293b;
+            margin: 0 0 5px 0;
+        }
+        .dev-role {
+            font-size: 0.9em;
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .dev-info-grid {
+            display: grid;
+            gap: 12px;
+            margin: 20px 0;
+            font-size: 0.95em;
+            color: #475569;
+        }
+        .dev-info-item {
+            background: #f8fafc;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .dev-info-item strong {
+            color: #1e293b;
+        }
+        .pricing-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 14px;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .pricing-title {
+            font-weight: bold;
+            color: #1e40af;
+            font-size: 1.05em;
+            margin-bottom: 4px;
+        }
+        .pricing-price {
+            font-size: 1.25em;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 6px;
+        }
+        .payment-methods {
+            font-size: 0.85em;
+            color: #1e40af;
+            font-weight: 600;
+            background: #dbeafe;
+            padding: 6px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 4px;
+        }
+        .qr-toggle-btn {
+            background: none;
+            border: 1px dashed #2563eb;
+            color: #2563eb;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.2s;
+        }
+        .qr-toggle-btn:hover {
+            background: #dbeafe;
+        }
+        .qr-container {
+            display: none;
+            margin-top: 12px;
+            text-align: center;
+        }
+        .qr-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .dev-socials {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .dev-social-btn {
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            color: white;
+        }
+        .btn-wa { background: #25D366; }
+        .btn-insta { background: #E1306C; }
+        .btn-call { background: #0f172a; }
+
+        @keyframes scaleUp {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         /* Social Share Buttons */
@@ -313,6 +487,36 @@
             background: #1e3a8a;
             color: #93c5fd;
         }
+        body.dark-mode .dev-modal {
+            background: #1f2937;
+            color: #f8fafc;
+            border: 1px solid #374151;
+        }
+        body.dark-mode .dev-name {
+            color: #f8fafc;
+        }
+        body.dark-mode .dev-info-item {
+            background: #111827;
+            border-color: #374151;
+            color: #9ca3af;
+        }
+        body.dark-mode .dev-info-item strong {
+            color: #f8fafc;
+        }
+        body.dark-mode .pricing-box {
+            background: #1e293b;
+            border-color: #3b82f6;
+        }
+        body.dark-mode .pricing-title {
+            color: #93c5fd;
+        }
+        body.dark-mode .payment-methods {
+            background: #1e3a8a;
+            color: #bfdbfe;
+        }
+        body.dark-mode .dev-close {
+            color: #9ca3af;
+        }
 
         /* VS Code Style Command Palette Overlay */
         .palette-overlay {
@@ -397,6 +601,50 @@
                 <li class="cmd-item" onclick="runCommand('faq')"><span>❓ Jump to FAQs</span> <span class="cmd-shortcut">FAQ</span></li>
                 <li class="cmd-item" onclick="runCommand('share')"><span>💬 Copy Website Link</span> <span class="cmd-shortcut">Share</span></li>
             </ul>
+        </div>
+    </div>
+
+    <!-- Web Designer Profile Modal -->
+    <div class="dev-modal-overlay" id="devModalOverlay" onclick="closeDevModal()">
+        <div class="dev-modal" onclick="event.stopPropagation()">
+            <button class="dev-close" onclick="closeDevModal()">&times;</button>
+            
+            <div class="dev-profile-header">
+                <!-- Ensure photo.jpg is in your repo folder -->
+                <img src="photo.jpg" alt="Neel Gaikwad" class="dev-avatar">
+                <h2 class="dev-name">Neel Gaikwad</h2>
+                <div class="dev-role">Freelance Web Designer & Frontend Developer</div>
+            </div>
+
+            <div class="dev-info-grid">
+                <div class="dev-info-item"><strong>Age:</strong> 18 Years</div>
+                <div class="dev-info-item"><strong>Primary Expertise:</strong> Specializing in fast, responsive, and clean custom websites. Expert in HTML5, CSS3, and Vanilla JS.</div>
+                <div class="dev-info-item"><strong>Tech Stack:</strong> Pure HTML5, CSS3, Vanilla JavaScript, Trigonometric Canvas, & Netlify Infrastructure.</div>
+                <div class="dev-info-item"><strong>Build Philosophy:</strong> Efficient coding architecture. Delivering high performance without bloated frameworks.</div>
+            </div>
+
+            <!-- Freelance Pricing Box with UPI & COD -->
+            <div class="pricing-box">
+                <div class="pricing-title">💼 Custom Web Engineering Services</div>
+                <div class="pricing-price">₹100 / Website <span style="font-size: 0.7em; color: #64748b; font-weight: normal;">(Up to 2 Pages)</span></div>
+                <div class="payment-methods">
+                    💳 UPI ID: <strong>9213451699@pz</strong> | COD Available
+                </div>
+                <div>
+                    <button class="qr-toggle-btn" onclick="toggleQrCode()">📷 View UPI QR Code</button>
+                </div>
+                <div class="qr-container" id="qrContainer">
+                    <!-- Ensure upi-qr.jpg is in your repo folder -->
+                    <img src="upi-qr.jpg" alt="UPI QR Code" class="qr-img">
+                </div>
+            </div>
+
+            <!-- Social & Contact Buttons -->
+            <div class="dev-socials">
+                <a href="https://wa.me/919213451699" target="_blank" class="dev-social-btn btn-wa">💬 WhatsApp</a>
+                <a href="https://instagram.com/ofc_neel" target="_blank" class="dev-social-btn btn-insta">📸 Instagram</a>
+                <a href="tel:+919213451699" class="dev-social-btn btn-call">📞 Call</a>
+            </div>
         </div>
     </div>
 
@@ -516,6 +764,11 @@
                 <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20BAMS%20vs%20MBBS%20comparison:%20https://medicalblogs.netlify.app" target="_blank" class="share-btn whatsapp">💬 Share on WhatsApp</a>
                 <a href="https://t.me/share/url?url=https://medicalblogs.netlify.app&text=BAMS%20vs%20MBBS%20Comparison%20Blog" target="_blank" class="share-btn telegram">✈️ Share on Telegram</a>
             </div>
+
+            <!-- Web Designer Footer Link -->
+            <div class="developer-footer-link">
+                <a href="#" onclick="openDevModal(); return false;">✨ Want a website like this? Tap to view Web Designer profile & pricing</a>
+            </div>
         </main>
 
         <footer>
@@ -523,7 +776,7 @@
         </footer>
     </div>
 
-    <!-- JavaScript: Dark Mode, Command Palette, Live Search & Canvas Radar Chart -->
+    <!-- JavaScript Engine -->
     <script>
         // --- 1. Dark Mode Toggle ---
         function toggleDarkMode() {
@@ -541,7 +794,25 @@
             drawRadarChart();
         }
 
-        // --- 2. Live Search Filter for Diseases ---
+        // --- 2. Developer Modal Controls ---
+        function openDevModal() {
+            document.getElementById('devModalOverlay').style.display = 'flex';
+        }
+
+        function closeDevModal() {
+            document.getElementById('devModalOverlay').style.display = 'none';
+        }
+
+        function toggleQrCode() {
+            const container = document.getElementById('qrContainer');
+            if (container.style.display === 'block') {
+                container.style.display = 'none';
+            } else {
+                container.style.display = 'block';
+            }
+        }
+
+        // --- 3. Live Search Filter for Diseases ---
         function filterDiseaseCards() {
             const query = document.getElementById('diseaseSearch').value.toLowerCase();
             const cards = document.querySelectorAll('.disease-card');
@@ -556,7 +827,7 @@
             });
         }
 
-        // --- 3. VS Code Style Command Palette Logic ---
+        // --- 4. VS Code Style Command Palette Logic ---
         document.addEventListener('keydown', function(e) {
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
@@ -564,6 +835,7 @@
             }
             if (e.key === 'Escape') {
                 closePalette();
+                closeDevModal();
             }
         });
 
@@ -608,7 +880,7 @@
             }
         }
 
-        // --- 4. Pure-Math Canvas Radar Chart Engine ---
+        // --- 5. Pure-Math Canvas Radar Chart Engine ---
         function drawRadarChart() {
             const canvas = document.getElementById('radarCanvas');
             if (!canvas.getContext) return;
