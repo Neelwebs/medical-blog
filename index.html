@@ -12,125 +12,36 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d">
     <meta property="og:url" content="https://medicalblogs.netlify.app">
     <meta property="og:type" content="website">
-    
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            color: #333;
-            background-color: #f8fafc;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 20px;
-        }
-        h1 {
-            color: #1e293b;
-            font-size: 2.2em;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            color: #64748b;
-            font-size: 1.1em;
-        }
-        h2 {
-            color: #0f172a;
-            margin-top: 30px;
-            font-size: 1.5em;
-        }
-        p {
-            margin-bottom: 20px;
-            font-size: 1.05em;
-            color: #475569;
-        }
-        .quiz-section {
-            margin-top: 40px;
-            padding: 30px;
-            background: #f1f5f9;
-            border-radius: 10px;
-            border: 1px solid #cbd5e1;
-        }
-        .quiz-btn {
-            display: block;
-            width: 100%;
-            padding: 14px 20px;
-            margin-top: 12px;
-            background: #ffffff;
-            border: 1px solid #94a3b8;
-            border-radius: 8px;
-            cursor: pointer;
-            text-align: left;
-            font-size: 1em;
-            color: #1e293b;
-            transition: all 0.2s ease;
-        }
-        .quiz-btn:hover {
-            background: #e2e8f0;
-            border-color: #64748b;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #94a3b8;
-            font-size: 0.9em;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 20px;
-        }
-    </style>
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; background-color: #f4f4f9;">
 
-    <div class="container">
-        <header>
-            <h1>BAMS vs MBBS: The Ultimate Comparison</h1>
-            <p class="subtitle">A comprehensive guide for students deciding between Ayurveda and Modern Medicine after 12th.</p>
-        </header>
+    <header style="text-align: center; padding: 20px 0;">
+        <h1 style="color: #2c3e50;">BAMS vs MBBS: The Ultimate Comparison</h1>
+        <p style="color: #555;">Choosing between Ayurveda and Modern Medicine after 12th.</p>
+    </header>
 
-        <main>
-            <section>
-                <h2>Introduction</h2>
-                <p>Choosing between BAMS (Bachelor of Ayurvedic Medicine and Surgery) and MBBS (Bachelor of Medicine and Bachelor of Surgery) is one of the biggest crossroads for medical aspirants. Both paths demand immense dedication, but their core philosophies, treatment approaches, and career trajectories are entirely different.</p>
-            </section>
+    <main>
+        <section style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h2 style="color: #2980b9;">Overview</h2>
+            <p>Both medical fields offer incredible career opportunities, but they have completely different philosophies. MBBS focuses on modern allopathic medicine, pharmacology, and clinical surgeries, whereas BAMS focuses on ancient Indian Ayurvedic medicine, natural herbs, and root-cause healing.</p>
+        </section>
 
-            <section>
-                <h2>Understanding MBBS (Allopathic Medicine)</h2>
-                <p>MBBS focuses on modern scientific medicine (Allopathy). It deals with advanced diagnostic tools, emergency care, pharmacology, and surgical interventions. If you are fascinated by modern technology, lab diagnostics, acute care, and pharmaceutical science, MBBS provides a globally recognized pathway into clinical practice.</p>
-            </section>
-
-            <section>
-                <h2>Understanding BAMS (Ayurvedic Medicine)</h2>
-                <p>BAMS focuses on ancient Indian traditional medicine combined with modern anatomy and physiology. Ayurveda looks at the root cause of diseases, treating the patient holistically through natural herbs, dietary regimens, and lifestyle modifications. It has seen a massive surge in global acceptance as people lean toward sustainable and preventive healthcare.</p>
-            </section>
-
-            <!-- Interactive Quiz Section -->
-            <div class="quiz-section">
-                <h3 style="color: #1e293b; text-align: center; margin-top: 0; margin-bottom: 20px;">🎯 Quick Quiz: Which Path Fits You Best?</h3>
-                
-                <div id="quiz-box">
-                    <p id="quiz-question" style="font-weight: bold; color: #1e293b;"></p>
-                    <div id="quiz-options"></div>
-                </div>
-                
-                <div id="quiz-result" style="margin-top: 20px; font-weight: bold; text-align: center; font-size: 1.1em;"></div>
+        <!-- Interactive BAMS vs MBBS Quiz Section -->
+        <section style="margin: 40px auto; padding: 25px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+            <h3 style="color: #2c3e50; text-align: center; margin-bottom: 20px;">🎯 Which Medical Path Fits You Best?</h3>
+            
+            <div id="quiz-box">
+                <p id="quiz-question" style="font-weight: bold; font-size: 1.1em; color: #333; margin-bottom: 15px;"></p>
+                <div id="quiz-options" style="display: flex; flex-direction: column; gap: 10px;"></div>
             </div>
-        </main>
+            
+            <div id="quiz-result" style="margin-top: 20px; font-weight: bold; text-align: center; font-size: 1.1em;"></div>
+        </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2026 Medical Blogs. All rights reserved.</p>
-        </footer>
-    </div>
+    <footer style="text-align: center; margin-top: 40px; color: #777; font-size: 0.9em;">
+        <p>&copy; 2026 Medical Blogs. All rights reserved.</p>
+    </footer>
 
     <script>
         const quizData = [
@@ -166,7 +77,18 @@
                 currentQ.options.forEach(opt => {
                     const btn = document.createElement("button");
                     btn.innerText = opt.text;
-                    btn.className = "quiz-btn";
+                    btn.style.padding = "12px 15px";
+                    btn.style.backgroundColor = "#f8f9fa";
+                    btn.style.border = "1px solid #cbd5e1";
+                    btn.style.borderRadius = "8px";
+                    btn.style.cursor = "pointer";
+                    btn.style.textAlign = "left";
+                    btn.style.fontSize = "1em";
+                    btn.style.width = "100%";
+
+                    btn.onmouseover = () => btn.style.backgroundColor = "#e2e8f0";
+                    btn.onmouseout = () => btn.style.backgroundColor = "#f8f9fa";
+
                     btn.onclick = () => selectAnswer(opt.type);
                     optionsElement.appendChild(btn);
                 });
