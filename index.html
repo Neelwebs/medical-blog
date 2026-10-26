@@ -1,293 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-    /* Dark Mode Styles */
-    body.dark-mode {
-        background-color: #0f172a !important;
-        color: #f8fafc !important;
-    }
-    body.dark-mode .container, 
-    body.dark-mode table, 
-    body.dark-mode details {
-        background-color: #1e293b !important;
-        color: #f8fafc !important;
-        border-color: #475569 !important;
-    }
-    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode summary {
-        color: #f8fafc !important;
-    }
-    body.dark-mode p, body.dark-mode li {
-        color: #cbd5e1 !important;
-    }
-
-    /* FAQ Accordion Styling */
-    details {
-        background: #ffffff;
-        padding: 15px;
-        margin: 15px 0;
-        border-radius: 8px;
-        border: 1px solid #cbd5e1;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-    summary {
-        font-weight: bold;
-        color: #1e293b;
-        font-size: 1.05em;
-    }
-    details p {
-        margin-top: 10px;
-        color: #475569;
-    }
-
-    /* Social Share Buttons Styling */
-    .social-share {
-        display: flex;
-        gap: 12px;
-        margin-top: 30px;
-        justify-content: center;
-    }
-    .share-btn {
-        padding: 10px 18px;
-        border-radius: 6px;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 0.9em;
-        display: inline-block;
-    }
-    .whatsapp { background-color: #25D366; }
-    .telegram { background-color: #0088cc; }
-    .share-btn:hover { opacity: 0.9; }
-
-    /* Dark Mode Toggle Button Styling */
-    .dark-toggle {
-        float: right;
-        padding: 6px 14px;
-        cursor: pointer;
-        border-radius: 6px;
-        border: 1px solid #cbd5e1;
-        background: #f1f5f9;
-        font-weight: bold;
-        color: #334155;
-    }
-</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mera BAMS & MBBS Medical Blog</title>
+    <title>BAMS vs MBBS: Which Medical Path is Right For You?</title>
     
-    <!-- Google tag (gtag.js) - Analytics Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XH6B1GVCT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-5XH6B1GVCT');
-    </script>
-
+    <!-- SEO & Open Graph Meta Tags -->
+    <meta name="description" content="BAMS vs MBBS - Compare careers, curriculum, and choose the right medical path.">
+    <meta property="og:title" content="BAMS vs MBBS: Which Medical Path is Right For You?">
+    <meta property="og:description" content="Explore the deep differences between Ayurveda and Modern Medicine.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d">
+    <meta property="og:url" content="https://medicalblogs.netlify.app">
+    <meta property="og:type" content="website">
+    
     <style>
-        /* 1. LIGHT MODE STYLING (Default Theme) */
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 40px; 
-            background-color: #f4f4f9; 
-            color: #333; 
+        /* Base Clean Layout */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 20px;
             transition: background 0.3s, color 0.3s;
         }
-
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            background: white;
-            padding: 30px;
+            background: #ffffff;
+            padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: background 0.3s, color 0.3s;
         }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #1e293b;
+            font-size: 2em;
+            margin: 0 0 5px 0;
+        }
+        .subtitle {
+            color: #64748b;
+            font-size: 1em;
+            margin: 0;
+        }
+        h2 {
+            color: #0f172a;
+            margin-top: 30px;
+            font-size: 1.4em;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.02em;
+            color: #475569;
+        }
 
-        h1 { color: #0066cc; text-align: center; }
-        h2 { color: #444; border-bottom: 2px solid #ddd; padding-bottom: 5px; margin-top: 35px; }
-        h3 { color: #0066cc; margin-top: 25px; }
-        h4 { color: #333; margin-top: 20px; margin-bottom: 8px; }
-        p { line-height: 1.6; font-size: 15px; }
-        ul { line-height: 1.7; margin-bottom: 20px; padding-left: 20px; }
-        li { margin-bottom: 6px; font-size: 15px; }
-
-        /* Comparison Table Styling */
-        .comparison-table {
+        /* Comparison Table Styles */
+        table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            font-size: 14px;
+            margin: 25px 0;
+            background: #ffffff;
         }
-        .comparison-table th, .comparison-table td {
-            padding: 12px;
-            border: 1px solid #ddd;
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 12px 15px;
             text-align: left;
-            vertical-align: top;
         }
-        .comparison-table th {
-            background-color: #0066cc;
-            color: white;
-        }
-        .comparison-table tr:nth-child(even) {
-            background-color: #f8f9fa;
+        th {
+            background-color: #f1f5f9;
+            color: #1e293b;
         }
 
-        /* 2. DARK MODE STYLING */
+        /* Dark Mode Styles */
         body.dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
+            background-color: #0f172a;
+            color: #f8fafc;
         }
         body.dark-mode .container {
-            background-color: #1e1e1e;
-            box-shadow: 0 4px 15px rgba(255,255,255,0.05);
+            background-color: #1e293b;
+            color: #f8fafc;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
-        body.dark-mode h1, body.dark-mode h3 { color: #4da6ff; }
-        body.dark-mode h2, body.dark-mode h4 { color: #ffffff; border-bottom: 2px solid #444; }
-        
-        /* Dark Mode Table Styling */
-        body.dark-mode .comparison-table th {
-            background-color: #1a73e8;
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode summary {
+            color: #f8fafc !important;
         }
-        body.dark-mode .comparison-table td, body.dark-mode .comparison-table th {
-            border-color: #444;
+        body.dark-mode p, body.dark-mode li, body.dark-mode .subtitle {
+            color: #cbd5e1 !important;
         }
-        body.dark-mode .comparison-table tr:nth-child(even) {
-            background-color: #252525;
+        body.dark-mode table, body.dark-mode th, body.dark-mode td {
+            background-color: #1e293b;
+            color: #f8fafc;
+            border-color: #475569;
+        }
+        body.dark-mode th {
+            background-color: #334155;
+        }
+        body.dark-mode details {
+            background: #334155;
+            border-color: #475569;
         }
 
-        /* Toggle Button Styling */
-        .toggle-btn {
-            display: block;
-            margin: 0 auto 20px auto;
-            padding: 10px 20px;
-            font-size: 14px;
-            font-weight: bold;
+        /* Dark Mode Toggle Button */
+        .dark-toggle {
+            padding: 8px 14px;
             cursor: pointer;
-            background-color: #0066cc;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            transition: background 0.2s;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            background: #f1f5f9;
+            font-weight: bold;
+            color: #334155;
+            transition: all 0.2s;
         }
-        .toggle-btn:hover { background-color: #004b99; }
+
+        /* FAQ Accordion Styling */
+        details {
+            background: #f8fafc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            cursor: pointer;
+        }
+        summary {
+            font-weight: bold;
+            color: #1e293b;
+            font-size: 1.05em;
+        }
+        details p {
+            margin-top: 10px;
+            color: #475569;
+            margin-bottom: 0;
+        }
+
+        /* Social Share Buttons */
+        .social-share {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        .share-btn {
+            padding: 10px 18px;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: inline-block;
+        }
+        .whatsapp { background-color: #25D366; }
+        .telegram { background-color: #0088cc; }
+        .share-btn:hover { opacity: 0.9; }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #94a3b8;
+            font-size: 0.9em;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 20px;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Dark / Light Mode Switch Button -->
-        <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark / Light Mode</button>
+        <!-- Header with Flexbox Layout & Dark Mode Button -->
+        <header>
+            <div>
+                <h1>BAMS vs MBBS: The Ultimate Comparison</h1>
+                <p class="subtitle">A comprehensive guide for students deciding between Ayurveda and Modern Medicine.</p>
+            </div>
+            <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        </header>
 
-        <!-- Blog Header -->
-        <h2>Medical Career Guide: BAMS vs. MBBS</h2>
-        <p>Explore a detailed breakdown, course structure, and head-to-head comparison between MBBS and BAMS professional medical degrees.</p>
-        
-        <!-- Part 1: MBBS -->
-        <h3>Part 1: MBBS (Bachelor of Medicine and Bachelor of Surgery)</h3>
-        <p>MBBS ko modern medical science (Allopathy) ka gold standard mana jata hai. Yeh pure world me ek standardized framework par chalta hai jo evidence-based medicine par आधारित hota hai.</p>
-        
-        <h4>1. Course Structure & Duration</h4>
-        <ul>
-            <li><strong>Duration:</strong> 5.5 years (4.5 years academic + 1 year compulsory internship).</li>
-            <li><strong>1st Year:</strong> Anatomy, Physiology, Biochemistry (Human body ka basic hardware aur function).</li>
-            <li><strong>2nd Year:</strong> Pathology, Pharmacology, Microbiology, Forensic Medicine (Bimariyan kaise hoti hain aur unka ilaaj chemical/drug level par kaise hota hai).</li>
-            <li><strong>3rd & Final Year:</strong> General Medicine, Surgery, Pediatrics, Obstetrics & Gynecology (OBG), Orthopedics, ENT, Ophthalmology, aur Community Medicine.</li>
-        </ul>
+        <main>
+            <section>
+                <h2>Introduction</h2>
+                <p>Choosing between BAMS (Bachelor of Ayurvedic Medicine and Surgery) and MBBS (Bachelor of Medicine and Bachelor of Surgery) is a major milestone for medical aspirants. Both fields hold immense respect, but their philosophies and practice methods are distinct.</p>
+            </section>
 
-        <h4>2. Career Scope & Earning Potential</h4>
-        <ul>
-            <li><strong>Junior Resident / Medical Officer:</strong> Degree milte hi aap hospitals me duty join kar sakte hain ya government exams (jaise UPSC CMS ya State PSC) dekar state/central medical officer ban sakte hain.</li>
-            <li><strong>Post-Graduation (MD / MS / DNB):</strong> MBBS ke baad NEET-PG exam clear karke specialization karni padti hai (jaise Cardiologist, Neurologist, Surgeon, Radiologist). Modern medicine me specialization ke bina career growth slow hoti hai.</li>
-            <li><strong>Corporate & Private Practice:</strong> Apollo, Fortis jaise bade corporate hospitals me specialists ki demand hamesha high rehti hai, aur private setup me bhi earning potential kaafi steep (tez) hota hai.</li>
-        </ul>
+            <section>
+                <h2>Quick Comparison Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>BAMS (Ayurveda)</th>
+                            <th>MBBS (Allopathy)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Core Philosophy</strong></td>
+                            <td>Natural balance, doshas, and root-cause healing</td>
+                            <td>Modern scientific medicine and targeted treatment</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Course Duration</strong></td>
+                            <td>5.5 Years (including internship)</td>
+                            <td>5.5 Years (including internship)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Treatment Style</strong></td>
+                            <td>Herbal formulations, dietary guidelines, Panchakarma</td>
+                            <td>Pharmaceutical drugs, surgeries, emergency intervention</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        <!-- Part 2: BAMS -->
-        <h3>Part 2: BAMS (Bachelor of Ayurvedic Medicine and Surgery)</h3>
-        <p>BAMS ek integrative medical degree hai jisme classical Indian medical texts (Samhitas) ke sath-sath modern medical science ki bhi padhai hoti hai.</p>
-        
-        <h4>1. Course Structure & Duration</h4>
-        <ul>
-            <li><strong>Duration:</strong> 5.5 years (4.5 years split into 3 professional years + 1 year internship).</li>
-            <li><strong>1st Professional Year:</strong> Sanskrit, Samhita Adhyayan, Padartha Vigyan (Philosophy), Rachana Sharira (Anatomy), aur Kriya Sharira (Physiology).</li>
-            <li><strong>2nd & 3rd Professional Years:</strong> Dravyaguna (Herbal Pharmacology), Rasa Shastra (Mineral & Metallic medicines), Agada Tantra (Toxicology), Rog Vinishchaya (Pathology), Swasthavritta (Preventive Medicine), ENT, Ophthalmology.</li>
-            <li><strong>Final Year:</strong> Kaya Chikitsa (Internal Medicine), Shalya Tantra (Surgery), Shalakya Tantra, Prasooti Tantra & Stree Roga (Gynecology), aur Kaumarbhritya (Pediatrics).</li>
-        </ul>
+            <!-- FAQ / Collapsible Accordion Section -->
+            <section style="margin-top: 40px;">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details>
+                    <summary>Which has a better career scope: BAMS or MBBS?</summary>
+                    <p>Both fields have great demand. MBBS excels in acute care and hospital surgeries, while BAMS is experiencing a massive global boom in preventive healthcare, wellness, and lifestyle management.</p>
+                </details>
 
-        <h4>2. Career Scope & Earning Potential</h4>
-        <ul>
-            <li><strong>Private Clinical Practice:</strong> Agar aapki clinical diagnostics aur chronic disease management (jaise joint disorders, skin diseases, metabolic issues) par pakad achi hai, toh private practice me bohot bada scope hai.</li>
-            <li><strong>Government Jobs (AYUSH MO):</strong> Central aur State governments ke through Government Ayurvedic Hospitals, dispensaries, aur National Health Mission (NHM) ke andar Medical Officers ki vacancies milti hain.</li>
-            <li><strong>Post-Graduation (MD / MS Ayurveda):</strong> AIAPGET exam ke zariye aap Panchakarma, Kaya Chikitsa, ya Shalya Tantra me specialization kar sakte hain.</li>
-            <li><strong>Wellness & Corporate Sector:</strong> International wellness resorts, medical tourism, aur Ayurvedic pharma companies (Dabur, Patanjali, Himalaya, etc.) me R&D aur consultancy roles milte hain.</li>
-        </ul>
+                <details>
+                    <summary>Is internship mandatory for both courses?</summary>
+                    <p>Yes, a 1-year compulsory rotating internship is mandatory for both BAMS and MBBS graduates before getting full medical practice registration.</p>
+                </details>
+            </section>
 
-        <!-- Part 3: Comparison Table -->
-        <h3>Part 3: Head-to-Head Comparison (BAMS vs. MBBS)</h3>
-        
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>Feature / Parameter</th>
-                    <th>MBBS (Allopathy)</th>
-                    <th>BAMS (Ayurveda + Modern Science)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Medical System</strong></td>
-                    <td>Evidence-based Modern Allopathic Medicine.</td>
-                    <td>Classical Ayurveda integrated with Modern Anatomy & Pathology.</td>
-                </tr>
-                <tr>
-                    <td><strong>Entrance Exam (India)</strong></td>
-                    <td>NEET-UG (All India single window).</td>
-                    <td>NEET-UG (All India single window).</td>
-                </tr>
-                <tr>
-                    <td><strong>Primary Focus</strong></td>
-                    <td>Acute care, emergency medicine, surgeries, and biochemical pharmacology.</td>
-                    <td>Root-cause treatment, chronic disease management, lifestyle correction, and Panchakarma.</td>
-                </tr>
-                <tr>
-                    <td><strong>Legal Practice Rights</strong></td>
-                    <td>Broad allopathic prescription rights and surgical procedures (as per specialization).</td>
-                    <td>Prescription of Ayurvedic formulations; state-wise legal frameworks vary regarding modern emergency drug usage.</td>
-                </tr>
-                <tr>
-                    <td><strong>Post-Graduation Exam</strong></td>
-                    <td>NEET-PG / INI-CET (Highly competitive, extensive syllabus).</td>
-                    <td>AIAPGET (All India AYUSH Post Graduate Entrance Test).</td>
-                </tr>
-                <tr>
-                    <td><strong>Initial Career Setup</strong></td>
-                    <td>High demand in emergency rooms, corporate hospitals, and junior resident roles right after graduation.</td>
-                    <td>Often builds on establishing a private clinic, joining wellness chains, or clearing AYUSH government exams.</td>
-                </tr>
-                <tr>
-                    <td><strong>Global Recognition</strong></td>
-                    <td>Universally recognized across all countries (subject to clearing local licensing exams like USMLE/PLAB).</td>
-                    <td>Recognized primarily where traditional medicine, holistic health, and wellness tourism are growing (Europe, US wellness sectors, Middle East).</td>
-                </tr>
-                <tr>
-                    <td><strong>Learning Curve</strong></td>
-                    <td>Heavy reliance on lab reports, diagnostic machinery, pharmaceuticals, and surgical techniques.</td>
-                    <td>Heavy reliance on patient constitution (Prakriti), pulse diagnosis (Nadi Pariksha), herbal pharmacology, and lifestyle assessment.</td>
-                </tr>
-            </tbody>
-        </table>
+            <!-- Direct Social Share Buttons -->
+            <div class="social-share">
+                <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20BAMS%20vs%20MBBS%20comparison:%20https://medicalblogs.netlify.app" target="_blank" class="share-btn whatsapp">💬 Share on WhatsApp</a>
+                <a href="https://t.me/share/url?url=https://medicalblogs.netlify.app&text=BAMS%20vs%20MBBS%20Comparison%20Blog" target="_blank" class="share-btn telegram">✈️ Share on Telegram</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Medical Blogs. All rights reserved.</p>
+        </footer>
     </div>
 
+    <!-- Dark Mode JavaScript Function -->
     <script>
-        // DOM Manipulation & Dark Mode Toggle Logic
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
+            const btn = document.querySelector('.dark-toggle');
+            if(document.body.classList.contains('dark-mode')) {
+                btn.innerText = "☀️ Light Mode";
+                btn.style.background = "#334155";
+                btn.style.color = "#f8fafc";
+            } else {
+                btn.innerText = "🌙 Dark Mode";
+                btn.style.background = "#f1f5f9";
+                btn.style.color = "#334155";
+            }
         }
     </script>
-
 </body>
 </html>
