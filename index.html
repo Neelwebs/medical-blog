@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAMS vs MBBS: Which Medical Path is Right For You?</title>
+    <title>BAMS vs MBBS: The Ultimate Comparison</title>
     
     <!-- SEO & Open Graph Meta Tags -->
     <meta name="description" content="BAMS vs MBBS - Compare careers, curriculum, and choose the right medical path.">
@@ -19,19 +19,20 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.7;
             color: #333;
-            background-color: #f8fafc;
+            background-color: #0b0f19; /* Sci-fi subtle deep space tint */
             margin: 0;
             padding: 20px;
             transition: background 0.3s, color 0.3s;
         }
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             background: #ffffff;
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             transition: background 0.3s, color 0.3s;
+            position: relative;
         }
         header {
             display: flex;
@@ -53,7 +54,7 @@
         }
         h2 {
             color: #0f172a;
-            margin-top: 30px;
+            margin-top: 35px;
             font-size: 1.4em;
         }
         p {
@@ -62,12 +63,41 @@
             color: #475569;
         }
 
+        /* Header Controls (Command Palette hint + Dark Mode) */
+        .header-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .cmd-hint {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            font-family: monospace;
+            color: #475569;
+            cursor: pointer;
+        }
+        .dark-toggle {
+            padding: 7px 14px;
+            cursor: pointer;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            background: #f1f5f9;
+            font-weight: bold;
+            color: #334155;
+            transition: all 0.2s;
+        }
+
         /* Comparison Table Styles */
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 25px 0;
             background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
         }
         th, td {
             border: 1px solid #cbd5e1;
@@ -79,46 +109,25 @@
             color: #1e293b;
         }
 
-        /* Dark Mode Styles */
-        body.dark-mode {
-            background-color: #0f172a;
-            color: #f8fafc;
+        /* Sci-Fi Canvas Radar Chart Section */
+        .radar-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 40px 0;
+            text-align: center;
         }
-        body.dark-mode .container {
-            background-color: #1e293b;
-            color: #f8fafc;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode summary {
-            color: #f8fafc !important;
-        }
-        body.dark-mode p, body.dark-mode li, body.dark-mode .subtitle {
-            color: #cbd5e1 !important;
-        }
-        body.dark-mode table, body.dark-mode th, body.dark-mode td {
-            background-color: #1e293b;
-            color: #f8fafc;
-            border-color: #475569;
-        }
-        body.dark-mode th {
-            background-color: #334155;
-        }
-        body.dark-mode details {
-            background: #334155;
-            border-color: #475569;
-        }
-
-        /* Dark Mode Toggle Button */
-        .dark-toggle {
-            padding: 8px 14px;
-            cursor: pointer;
-            border-radius: 6px;
-            border: 1px solid #cbd5e1;
-            background: #f1f5f9;
+        .radar-legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
             font-weight: bold;
-            color: #334155;
-            transition: all 0.2s;
+            font-size: 0.95em;
         }
+        .legend-mbbs { color: #2563eb; }
+        .legend-bams { color: #16a34a; }
 
         /* FAQ Accordion Styling */
         details {
@@ -168,18 +177,154 @@
             border-top: 1px solid #e2e8f0;
             padding-top: 20px;
         }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #030712;
+            color: #f8fafc;
+        }
+        body.dark-mode .container {
+            background-color: #111827;
+            color: #f8fafc;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode summary {
+            color: #f8fafc !important;
+        }
+        body.dark-mode p, body.dark-mode li, body.dark-mode .subtitle {
+            color: #9ca3af !important;
+        }
+        body.dark-mode table, body.dark-mode th, body.dark-mode td {
+            background-color: #1f2937;
+            color: #f8fafc;
+            border-color: #374151;
+        }
+        body.dark-mode th {
+            background-color: #111827;
+        }
+        body.dark-mode details {
+            background: #1f2937;
+            border-color: #374151;
+        }
+        body.dark-mode .radar-section {
+            background: #1f2937;
+            border-color: #374151;
+        }
+        body.dark-mode .cmd-hint, body.dark-mode .dark-toggle {
+            background: #374151;
+            color: #f8fafc;
+            border-color: #4b5563;
+        }
+        body.dark-mode .command-palette {
+            background: rgba(17, 24, 39, 0.95);
+            border-color: #374151;
+        }
+        body.dark-mode .cmd-input {
+            background: #1f2937;
+            color: #f8fafc;
+            border-color: #374151;
+        }
+        body.dark-mode .cmd-item:hover, body.dark-mode .cmd-item.active {
+            background: #374151;
+        }
+
+        /* VS Code Style Command Palette Overlay */
+        .palette-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 100px;
+            z-index: 1000;
+        }
+        .command-palette {
+            width: 100%;
+            max-width: 550px;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: fadeIn 0.15s ease-out;
+        }
+        .cmd-input {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 1.1em;
+            border: none;
+            border-bottom: 1px solid #e2e8f0;
+            outline: none;
+            background: #f8fafc;
+            color: #1e293b;
+            box-sizing: border-box;
+        }
+        .cmd-list {
+            list-style: none;
+            margin: 0;
+            padding: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        .cmd-item {
+            padding: 12px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95em;
+            color: #334155;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cmd-item:hover, .cmd-item.active {
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+        .cmd-shortcut {
+            font-size: 0.8em;
+            background: #e2e8f0;
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #64748b;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Command Palette Modal -->
+    <div class="palette-overlay" id="cmdOverlay" onclick="closePalette(event)">
+        <div class="command-palette" onclick="event.stopPropagation()">
+            <input type="text" class="cmd-input" id="cmdInput" placeholder="Type a command or search (e.g., dark, table, faq)..." oninput="filterCommands()">
+            <ul class="cmd-list" id="cmdList">
+                <li class="cmd-item" onclick="runCommand('dark')"><span>🌙 Toggle Dark/Light Mode</span> <span class="cmd-shortcut">Enter</span></li>
+                <li class="cmd-item" onclick="runCommand('table')"><span>📊 Jump to Comparison Table</span> <span class="cmd-shortcut">Table</span></li>
+                <li class="cmd-item" onclick="runCommand('radar')"><span>⚡ Jump to Radar Matrix Analysis</span> <span class="cmd-shortcut">Chart</span></li>
+                <li class="cmd-item" onclick="runCommand('faq')"><span>❓ Jump to FAQs</span> <span class="cmd-shortcut">FAQ</span></li>
+                <li class="cmd-item" onclick="runCommand('share')"><span>💬 Copy Website Link</span> <span class="cmd-shortcut">Share</span></li>
+            </ul>
+        </div>
+    </div>
+
     <div class="container">
-        <!-- Header with Flexbox Layout & Dark Mode Button -->
+        <!-- Header with Flexbox Layout & Controls -->
         <header>
             <div>
                 <h1>BAMS vs MBBS: The Ultimate Comparison</h1>
                 <p class="subtitle">A comprehensive guide for students deciding between Ayurveda and Modern Medicine.</p>
             </div>
-            <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+            <div class="header-controls">
+                <button class="cmd-hint" onclick="openPalette()">⌘K Cmd</button>
+                <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+            </div>
         </header>
 
         <main>
@@ -188,7 +333,7 @@
                 <p>Choosing between BAMS (Bachelor of Ayurvedic Medicine and Surgery) and MBBS (Bachelor of Medicine and Bachelor of Surgery) is a major milestone for medical aspirants. Both fields hold immense respect, but their philosophies and practice methods are distinct.</p>
             </section>
 
-            <section>
+            <section id="table-section">
                 <h2>Quick Comparison Table</h2>
                 <table>
                     <thead>
@@ -218,8 +363,21 @@
                 </table>
             </section>
 
+            <!-- Feature 1: Pure-Math Sci-Fi Canvas Radar Chart -->
+            <section class="radar-section" id="radar-section">
+                <h2 style="margin-top: 0;">⚡ Multi-Axis Matrix Comparison</h2>
+                <p style="font-size: 0.95em; color: #64748b; margin-bottom: 20px;">Comparative vector analysis across 5 core medical dimensions (Rendered via HTML5 Trigonometric Canvas Engine).</p>
+                
+                <div class="radar-legend">
+                    <span class="legend-mbbs">■ MBBS (Allopathy)</span>
+                    <span class="legend-bams">■ BAMS (Ayurveda)</span>
+                </div>
+
+                <canvas id="radarCanvas" width="450" height="400" style="max-width: 100%; height: auto;"></canvas>
+            </section>
+
             <!-- FAQ / Collapsible Accordion Section -->
-            <section style="margin-top: 40px;">
+            <section id="faq-section" style="margin-top: 40px;">
                 <h2>Frequently Asked Questions</h2>
                 
                 <details>
@@ -245,21 +403,171 @@
         </footer>
     </div>
 
-    <!-- Dark Mode JavaScript Function -->
+    <!-- JavaScript: Dark Mode, Command Palette & Pure-Math Canvas Radar Chart -->
     <script>
+        // --- 1. Dark Mode Toggle ---
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
             const btn = document.querySelector('.dark-toggle');
             if(document.body.classList.contains('dark-mode')) {
                 btn.innerText = "☀️ Light Mode";
-                btn.style.background = "#334155";
+                btn.style.background = "#374151";
                 btn.style.color = "#f8fafc";
             } else {
                 btn.innerText = "🌙 Dark Mode";
                 btn.style.background = "#f1f5f9";
                 btn.style.color = "#334155";
             }
+            drawRadarChart(); // Redraw canvas for dark mode colors
         }
+
+        // --- 2. VS Code Style Command Palette Logic ---
+        document.addEventListener('keydown', function(e) {
+            // Trigger with Ctrl+K or Cmd+K
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                openPalette();
+            }
+            // Close with Escape
+            if (e.key === 'Escape') {
+                closePalette();
+            }
+        });
+
+        function openPalette() {
+            const overlay = document.getElementById('cmdOverlay');
+            overlay.style.display = 'flex';
+            document.getElementById('cmdInput').value = '';
+            document.getElementById('cmdInput').focus();
+            filterCommands();
+        }
+
+        function closePalette() {
+            document.getElementById('cmdOverlay').style.display = 'none';
+        }
+
+        function filterCommands() {
+            const query = document.getElementById('cmdInput').value.toLowerCase();
+            const items = document.querySelectorAll('.cmd-item');
+            items.forEach(item => {
+                const text = item.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function runCommand(action) {
+            closePalette();
+            if (action === 'dark') {
+                toggleDarkMode();
+            } else if (action === 'table') {
+                document.getElementById('table-section').scrollIntoView({ behavior: 'smooth' });
+            } else if (action === 'radar') {
+                document.getElementById('radar-section').scrollIntoView({ behavior: 'smooth' });
+            } else if (action === 'faq') {
+                document.getElementById('faq-section').scrollIntoView({ behavior: 'smooth' });
+            } else if (action === 'share') {
+                navigator.clipboard.writeText(window.location.href);
+                alert("🔗 Website link copied to clipboard!");
+            }
+        }
+
+        // --- 3. Pure-Math Canvas Radar Chart Engine ---
+        function drawRadarChart() {
+            const canvas = document.getElementById('radarCanvas');
+            if (!canvas.getContext) return;
+            const ctx = canvas.getContext('2d');
+            
+            const width = canvas.width;
+            const height = canvas.height;
+            const centerX = width / 2;
+            const centerY = height / 2 + 10;
+            const radius = 130;
+
+            ctx.clearRect(0, 0, width, height);
+
+            const labels = ["Emergency", "Holistic", "Surgical", "Work-Life", "Global Demand"];
+            const numAxes = labels.length;
+            
+            // Data normalized out of 100
+            const mbbsData = [95, 40, 95, 50, 90];
+            const bamsData = [30, 95, 40, 80, 70];
+
+            const isDark = document.body.classList.contains('dark-mode');
+            const gridColor = isDark ? '#374151' : '#cbd5e1';
+            const textColor = isDark ? '#9ca3af' : '#475569';
+
+            // Draw Web Grid (Concentric polygons)
+            for (let level = 1; level <= 4; level++) {
+                ctx.beginPath();
+                ctx.strokeStyle = gridColor;
+                ctx.lineWidth = 1;
+                const r = (radius / 4) * level;
+                for (let i = 0; i < numAxes; i++) {
+                    const angle = (Math.PI * 2 / numAxes) * i - Math.PI / 2;
+                    const x = centerX + r * Math.cos(angle);
+                    const y = centerY + r * Math.sin(angle);
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.closePath();
+                ctx.stroke();
+            }
+
+            // Draw Axis Lines & Labels
+            ctx.font = '12px Segoe UI, sans-serif';
+            ctx.fillStyle = textColor;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            for (let i = 0; i < numAxes; i++) {
+                const angle = (Math.PI * 2 / numAxes) * i - Math.PI / 2;
+                const xEnd = centerX + radius * Math.cos(angle);
+                const yEnd = centerY + radius * Math.sin(angle);
+
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(xEnd, yEnd);
+                ctx.strokeStyle = gridColor;
+                ctx.stroke();
+
+                // Label positioning offset
+                const labelDist = radius + 25;
+                const lx = centerX + labelDist * Math.cos(angle);
+                const ly = centerY + labelDist * Math.sin(angle);
+                ctx.fillText(labels[i], lx, ly);
+            }
+
+            // Helper function to draw dataset polygon
+            function drawPolygon(data, strokeColor, fillColor) {
+                ctx.beginPath();
+                for (let i = 0; i < numAxes; i++) {
+                    const angle = (Math.PI * 2 / numAxes) * i - Math.PI / 2;
+                    const valRatio = data[i] / 100;
+                    const x = centerX + radius * valRatio * Math.cos(angle);
+                    const y = centerY + radius * valRatio * Math.sin(angle);
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.closePath();
+                ctx.fillStyle = fillColor;
+                ctx.fill();
+                ctx.strokeStyle = strokeColor;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+
+            // Draw BAMS Polygon (Green)
+            drawPolygon(bamsData, 'rgba(22, 163, 74, 0.9)', 'rgba(22, 163, 74, 0.2)');
+            // Draw MBBS Polygon (Blue)
+            drawPolygon(mbbsData, 'rgba(37, 99, 235, 0.9)', 'rgba(37, 99, 235, 0.2)');
+        }
+
+        // Initialize Radar Chart on load
+        window.onload = drawRadarChart;
     </script>
 </body>
 </html>
