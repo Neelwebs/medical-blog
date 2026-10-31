@@ -586,7 +586,21 @@
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-    </style>
+    
+    
+    /* Tera purana CSS yahan hoga */
+    body { ... }
+    
+    /* Yeh naya wala Read Next CSS yahan paste kar de */
+    .read-next-section {
+        margin: 50px auto;
+        max-width: 1000px;
+        padding: 0 20px;
+        border-top: 1px solid #e2e8f0;
+        padding-top: 30px;
+    }
+    /* ... baki sara CSS code ... */
+</style>
 </head>
 <body>
 
@@ -966,5 +980,33 @@
 
         window.onload = drawRadarChart;
     </script>
+
+<section class="read-next-section">
+    <h3>📖 Read Next</h3>
+    <div class="read-next-grid">
+        
+        <!-- Article 1: Medical History -->
+        <a href="history.html" class="read-next-card">
+            <span class="category-tag">Medical History</span>
+            <h4>Knowing Your Roots</h4>
+            <p>Explore the evolution of traditional systems and how ancient insights shape modern healthcare.</p>
+        </a>
+
+        <!-- Article 2: AI in Medicine -->
+        <a href="ai.html" class="read-next-card">
+            <span class="category-tag">Technology</span>
+            <h4>The Importance of AI</h4>
+            <p>How artificial intelligence is accelerating diagnostics and transforming clinical accuracy.</p>
+        </a>
+
+        <!-- Article 3: Drugs & Vapes -->
+        <a href="drugs.html" class="read-next-card">
+            <span class="category-tag">Public Health</span>
+            <h4>Overusage of Drugs & Vapes</h4>
+            <p>Unpacking the hidden physiological consequences of modern addiction and resistance.</p>
+        </a>
+
+    </div>
+</section>
 </body>
-</html>
+</html> 
